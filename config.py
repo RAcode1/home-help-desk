@@ -23,8 +23,8 @@ MODEL_PRICING = {
 # ==========================================
 # GMAIL
 # ==========================================
-INBOX_QUERY = "in:inbox newer_than:1d"        # what the morning digest reads
-MAX_EMAILS = 60                               # most emails sorted per run
+INBOX_QUERY = 'in:inbox newer_than:1d -subject:"Morning digest"'  # skip yesterday's digest itself
+MAX_EMAILS = 150                              # most emails sorted per run (a busy inbox gets ~100 a day)
 MAX_BODY_CHARS = 1500                         # only the start of each email goes to Claude (cost and privacy)
 WAIT_DAYS = 3                                 # a sent email with no answer after this many days counts as "waiting"
 WAIT_LOOKBACK = "newer_than:30d"              # how far back to look for unanswered emails

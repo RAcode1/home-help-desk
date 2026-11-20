@@ -32,7 +32,9 @@ SCOPES = [
 ]
 CREDENTIALS_FILE = "credentials.json"  # downloaded from Google Cloud; never commit
 TOKEN_FILE = "token.json"              # created after you sign in; never commit
-BATCH_SIZE = 50
+BATCH_SIZE = 25      # Gmail allows about 250 quota units a second; each read costs 5
+BATCH_PAUSE = 0.6    # seconds between batches, to stay under that limit
+RETRIES = 7          # Gmail rate limits: wait and retry (the client backs off exponentially)
 
 
 # ==========================================
@@ -65,7 +67,7 @@ def get_service():
 
 
 def my_address(service):
-    return service.users().getProfile(userId="me").execute()["emailAddress"]
+    return service.users().getProfile(userId="me").execute(num_retries=RETRIES)["emailAddress"]
 
 
 # ==========================================
@@ -77,7 +79,7 @@ def _list_ids(service, query, limit):
     while len(ids) < limit:
         response = service.users().messages().list(
             userId="me", q=query, maxResults=min(500, limit - len(ids)), pageToken=page_token
-        ).execute()
+        ).execute(num_retries=RETRIES)
         ids += [m["id"] for m in response.get("messages", [])]
         page_token = response.get("nextPageToken")
         if not page_token:
@@ -86,7 +88,7 @@ def _list_ids(service, query, limit):
 
 
 def _batch_get(service, make_request, keys):
-    """Run many GET requests in batches of 50; retry failures once."""
+    """Run many GET requests in small batches; retry failures up to 3 times."""
     results, failed = {}, []
 
     def callback(request_id, response, exception):
@@ -96,16 +98,17 @@ def _batch_get(service, make_request, keys):
             failed.append(request_id)
 
     pending = list(keys)
-    for attempt in range(2):
+    for attempt in range(4):
         for start in range(0, len(pending), BATCH_SIZE):
             batch = service.new_batch_http_request(callback=callback)
             for key in pending[start:start + BATCH_SIZE]:
                 batch.add(make_request(key), request_id=key)
             batch.execute()
+            time.sleep(BATCH_PAUSE)
         if not failed:
             break
         pending, failed = failed, []
-        time.sleep(2)  # usually a rate limit; wait and retry once
+        time.sleep(20)  # usually a per-minute rate limit; wait, then retry what failed
 
     return [results[key] for key in keys if key in results]
 
@@ -255,4 +258,4 @@ def insert_digest(service, me, subject, html_body):
     raw = base64.urlsafe_b64encode(message.as_bytes()).decode()
     service.users().messages().insert(
         userId="me", body={"raw": raw, "labelIds": ["INBOX", "UNREAD"]}
-    ).execute()
+    ).execute(num_retries=RETRIES)

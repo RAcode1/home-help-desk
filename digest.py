@@ -16,6 +16,7 @@ Usage:
 
 import argparse
 import json
+import sys
 from datetime import datetime
 from html import escape
 from pathlib import Path
@@ -95,6 +96,8 @@ def _sections(result):
 
 
 def _things(count):
+    if count == 0:
+        return "nothing needs"
     return f"{count} thing needs" if count == 1 else f"{count} things need"
 
 
@@ -109,7 +112,7 @@ def _ticket_line(ticket):
 
 def render_text(result):
     s = _sections(result)
-    lines = [f"Good morning. {_things(len(s['today']))} you today:"]
+    lines = [f"Good morning, {_things(len(s['today']))} you today" + (":" if s["today"] else ".")]
     for e in s["today"]:
         due = f" (due: {e['due']})" if e.get("due") else ""
         lines.append(f"  - {e['summary']}{due}")
@@ -136,7 +139,7 @@ def render_html(result):
     def items(rows):
         return "<ul>" + "".join(f"<li>{row}</li>" for row in rows) + "</ul>"
 
-    parts = [f"<h2>Good morning. {_things(len(s['today']))} you today</h2>"]
+    parts = [f"<h2>Good morning, {_things(len(s['today']))} you today</h2>"]
     parts.append(items(
         escape(e["summary"]) + (f" <b>(due: {escape(e['due'])})</b>" if e.get("due") else "")
         for e in s["today"]
@@ -170,4 +173,5 @@ if __name__ == "__main__":
     parser.add_argument("--demo", action="store_true", help="use the made-up inbox in demo/")
     parser.add_argument("--deliver", action="store_true", help="add the digest to your Gmail inbox")
     args = parser.parse_args()
+    sys.stdout.reconfigure(encoding="utf-8")  # sender names like "Chico’s" print correctly on Windows
     print(render_text(run(demo=args.demo, deliver=args.deliver)))
