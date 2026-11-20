@@ -180,10 +180,10 @@ prints its cost.
 3. **Your own inbox:** copy `.env.example` to `.env` and add your Anthropic API key. Then connect
    Gmail (below) and run `python digest.py`, or `python digest.py --deliver` to add the digest to
    your inbox.
-4. **Every morning:** schedule `run_digest.bat` in Windows Task Scheduler:
-   ```
-   schtasks /create /tn "Morning digest" /tr "C:\path\to\home-help-desk\run_digest.bat" /sc daily /st 07:00
-   ```
+4. **Every morning:** run `setup_schedule.ps1` once in PowerShell. Windows then checks every 30
+   minutes from 7 AM, and at sign-in. The digest goes out at 7 AM if the laptop is on, otherwise at
+   the first check after it's on; a failed run is retried at the next check, and once the day's
+   digest is delivered the rest of the checks do nothing (`scheduled_run.py`).
 
 ### Connect Gmail
 
