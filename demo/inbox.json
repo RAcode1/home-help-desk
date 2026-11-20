@@ -1,0 +1,130 @@
+[
+  {
+    "id": "e01",
+    "from": "Prairie Water Utility <billing@prairiewater.example>",
+    "subject": "Your November water bill is ready",
+    "date": "Thu, 19 Nov 2026 06:10:00 -0600",
+    "unread": true,
+    "body": "Hello, your November water bill of $84.20 is ready. Payment is due Friday, November 21. Pay online at prairiewater.example/pay or set up autopay to never miss a due date."
+  },
+  {
+    "id": "e02",
+    "from": "Maple Elementary <office@maple-elem.example>",
+    "subject": "Field trip permission slip due tomorrow",
+    "date": "Wed, 18 Nov 2026 15:42:00 -0600",
+    "unread": true,
+    "body": "Dear families, the Grade 2 field trip to the science museum is on December 2. Please sign the permission slip in your child's folder and return it with $8 by Friday, November 20."
+  },
+  {
+    "id": "e03",
+    "from": "Jordan Lee <jordan.lee@talentpartners.example>",
+    "subject": "Interview times for the QA Engineer role",
+    "date": "Thu, 19 Nov 2026 08:05:00 -0600",
+    "unread": true,
+    "body": "Hi, thanks for applying. The hiring manager would like to talk with you this week. Could you send me two or three times that work for you on Thursday or Friday afternoon?"
+  },
+  {
+    "id": "e04",
+    "from": "Brightmart <deals@brightmart.example>",
+    "subject": "48-hour flash sale: up to 60% off everything!",
+    "date": "Thu, 19 Nov 2026 05:00:00 -0600",
+    "unread": true,
+    "body": "Don't miss out! Our biggest sale of the season ends in 48 hours. Shop kitchen, home, toys and more. Free shipping over $35."
+  },
+  {
+    "id": "e05",
+    "from": "Brightmart <deals@brightmart.example>",
+    "subject": "Your cart misses you",
+    "date": "Wed, 18 Nov 2026 19:30:00 -0600",
+    "unread": true,
+    "body": "You left 2 items in your cart. Complete your order today and get 10% off with code COMEBACK10."
+  },
+  {
+    "id": "e06",
+    "from": "Deal Daily <hello@dealdaily.example>",
+    "subject": "Today's top 10 deals",
+    "date": "Thu, 19 Nov 2026 04:15:00 -0600",
+    "unread": true,
+    "body": "Hand-picked deals for you: air fryers, winter jackets, headphones and more. Prices this low won't last."
+  },
+  {
+    "id": "e07",
+    "from": "Maple Elementary PTA <pta@maple-elem.example>",
+    "subject": "PTA newsletter: November",
+    "date": "Wed, 18 Nov 2026 12:00:00 -0600",
+    "unread": true,
+    "body": "Thank you to everyone who helped at the fall festival! Coming up: book fair Dec 8-12, winter concert Dec 17. Volunteers are always welcome."
+  },
+  {
+    "id": "e08",
+    "from": "QuickShip <updates@quickship.example>",
+    "subject": "Your package has shipped",
+    "date": "Wed, 18 Nov 2026 21:14:00 -0600",
+    "unread": true,
+    "body": "Good news! Your order #4471-2290 has shipped and should arrive Monday, November 23. Track it any time in the QuickShip app."
+  },
+  {
+    "id": "e09",
+    "from": "Sunrise Dental <appointments@sunrisedental.example>",
+    "subject": "Please confirm your appointment on Mon, Nov 24 at 3:30 PM",
+    "date": "Thu, 19 Nov 2026 07:00:00 -0600",
+    "unread": true,
+    "body": "You have a cleaning appointment on Monday, November 24 at 3:30 PM. Reply C to confirm, or call us at least 24 hours ahead to reschedule."
+  },
+  {
+    "id": "e10",
+    "from": "Account Security <security@acc0unt-verify.example>",
+    "subject": "Urgent: your account will be suspended in 24 hours",
+    "date": "Thu, 19 Nov 2026 02:47:00 -0600",
+    "unread": true,
+    "body": "We detected unusual sign-in activity. Verify your password now at http://acc0unt-verify.example/login or your account and all your data will be permanently closed."
+  },
+  {
+    "id": "e11",
+    "from": "Heartland Bank <statements@heartlandbank.example>",
+    "subject": "Your October statement is available",
+    "date": "Wed, 18 Nov 2026 09:00:00 -0600",
+    "unread": true,
+    "body": "Your October statement for checking account ending 4410 is ready to view in online banking. No action is needed."
+  },
+  {
+    "id": "e12",
+    "from": "Cedar Public Library <notices@cedarlibrary.example>",
+    "subject": "2 items due in 3 days",
+    "date": "Thu, 19 Nov 2026 06:30:00 -0600",
+    "unread": true,
+    "body": "Reminder: 'The Wild Robot' and 'Dog Man: Mothering Heights' are due Sunday, November 22. Renew online or return them to any branch."
+  },
+  {
+    "id": "e13",
+    "from": "Dana Whitfield <dana.w@mail.example>",
+    "subject": "Dinner on Saturday?",
+    "date": "Wed, 18 Nov 2026 20:20:00 -0600",
+    "unread": true,
+    "body": "Hi! We're having a few friends over on Saturday at 6. Can you all make it? Let me know by Thursday so I can plan the food."
+  },
+  {
+    "id": "e14",
+    "from": "JobBoard Alerts <alerts@jobboard.example>",
+    "subject": "12 new QA Engineer jobs for you",
+    "date": "Thu, 19 Nov 2026 06:00:00 -0600",
+    "unread": true,
+    "body": "New jobs matching your saved search: QA Engineer (remote), Senior QA Analyst, Test Automation Engineer, and 9 more."
+  },
+  {
+    "id": "e15",
+    "from": "StreamFlix <billing@streamflix.example>",
+    "subject": "Your free trial ends in 2 days",
+    "date": "Thu, 19 Nov 2026 03:00:00 -0600",
+    "unread": true,
+    "body": "Your free trial ends on November 21. After that, your plan renews at $15.49 a month unless you cancel in your account settings."
+  },
+  {
+    "id": "e16",
+    "from": "Deal Daily <hello@dealdaily.example>",
+    "subject": "Last chance: these deals end tonight",
+    "date": "Wed, 18 Nov 2026 17:00:00 -0600",
+    "unread": true,
+    "body": "Final hours! Save big on top brands before midnight. Shop now."
+  }
+]

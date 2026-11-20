@@ -1,0 +1,13 @@
+# secrets: never commit
+.env
+credentials.json
+token.json
+
+# your own data stays on your computer
+data/
+digest.html
+
+# python
+.venv/
+__pycache__/
+*.pyc

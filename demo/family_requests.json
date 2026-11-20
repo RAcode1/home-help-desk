@@ -1,0 +1,26 @@
+[
+  {
+    "person": "Dad",
+    "text": "Internet not working since morning. The light on the box is blinking red. TV also not working."
+  },
+  {
+    "person": "Mom",
+    "text": "Got this SMS: 'Dear customer, your electricity connection will be disconnected tonight at 9:30 PM because your last month bill was not updated. Please contact our officer immediately at 98XXXXXX10.' Should I call?"
+  },
+  {
+    "person": "Mother-in-law",
+    "text": "WhatsApp is saying storage full. I cannot download the photos you sent."
+  },
+  {
+    "person": "Father-in-law",
+    "text": "Someone called from the bank saying my card is blocked. He said he will send an OTP and I should read it to him to unblock the card. He was very polite."
+  },
+  {
+    "person": "Mom",
+    "text": "Phone is saying storage almost full again. Same as last month."
+  },
+  {
+    "person": "Dad",
+    "text": "How do we video call you on the new smart TV? The grandkids want to see us on the big screen."
+  }
+]

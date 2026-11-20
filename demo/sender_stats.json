@@ -1,0 +1,7 @@
+[
+  {"sender": "Brightmart", "count": 41, "unread": 41, "unsubscribe": "https://brightmart.example/unsubscribe"},
+  {"sender": "Deal Daily", "count": 23, "unread": 22, "unsubscribe": "https://dealdaily.example/unsubscribe"},
+  {"sender": "ShoeHub", "count": 12, "unread": 12, "unsubscribe": "https://shoehub.example/unsubscribe"},
+  {"sender": "Maple Elementary PTA", "count": 6, "unread": 1, "unsubscribe": ""},
+  {"sender": "QuickShip", "count": 4, "unread": 4, "unsubscribe": ""}
+]

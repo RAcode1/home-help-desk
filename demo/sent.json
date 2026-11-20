@@ -1,0 +1,30 @@
+[
+  {
+    "thread_id": "t01",
+    "to": "Claims Team <claims@heartlandinsure.example>",
+    "subject": "Question about claim #48213",
+    "days_waiting": 9,
+    "body": "Hello, I submitted the photos for claim #48213 on November 10. Could you tell me if anything else is needed, and when I can expect an update? Thank you."
+  },
+  {
+    "thread_id": "t02",
+    "to": "Rob's Plumbing <rob@robsplumbing.example>",
+    "subject": "Quote for kitchen faucet",
+    "days_waiting": 4,
+    "body": "Hi Rob, could you send me a quote for replacing our kitchen faucet? Any weekday next week works for a visit."
+  },
+  {
+    "thread_id": "t03",
+    "to": "Dana Whitfield <dana.w@mail.example>",
+    "subject": "Thank you!",
+    "days_waiting": 6,
+    "body": "Thanks again for dinner last week. The kids are still talking about the dessert!"
+  },
+  {
+    "thread_id": "t04",
+    "to": "Jordan Lee <jordan.lee@talentpartners.example>",
+    "subject": "Re: QA Engineer role",
+    "days_waiting": 1,
+    "body": "Hi Jordan, thanks for reaching out. I'm interested and attached my resume."
+  }
+]
