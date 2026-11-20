@@ -54,6 +54,12 @@ def get_service():
             creds = None  # token revoked or expired: sign in again
 
     if not creds or not creds.valid:
+        if os.getenv("HHD_NONINTERACTIVE") == "1":
+            # Scheduled run: never wait on a browser window nobody will see.
+            raise RuntimeError(
+                "Gmail sign-in expired (Google does this every 7 days for apps in testing). "
+                "Run 'python digest.py' once to sign in again."
+            )
         if not os.path.exists(CREDENTIALS_FILE):
             raise FileNotFoundError(
                 "credentials.json not found. See 'Connect Gmail' in the README."

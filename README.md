@@ -192,4 +192,8 @@ prints its cost.
    as `credentials.json`.
 4. The first run opens a browser to sign in. A `token.json` is saved so later runs don't ask.
 
+While the Google app is in testing mode, Google ends the sign-in every 7 days. The scheduled run
+then stops with a note in `data/digest.log` instead of waiting on a browser window; run
+`python digest.py` once to sign in again.
+
 `credentials.json`, `token.json` and `.env` are in `.gitignore` and never committed.
