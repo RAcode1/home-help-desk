@@ -5,6 +5,11 @@
 A small Python app on the Claude API that runs my inbox and my family's tech questions like a
 support queue. Built with Claude Code.
 
+**▶ [Try the interactive demo](https://racode1.github.io/#digest)**: watch a made-up inbox get sorted
+and a family scam message get answered. No sign-in.
+
+![Morning digest demo: a made-up inbox sorted into needs you today, can wait and noise](docs/demo-digest.gif)
+
 ## What it does
 
 **Morning digest.** Every morning it reads the last day of email and puts one short summary in my
@@ -24,6 +29,8 @@ questions on WhatsApp, often with a screenshot. I paste each one in and it becom
 - a scam check
 - a simple step-by-step reply in their language, ready to send back
 - patterns over time, so I can see what keeps coming back and teach the fix once
+
+![Family help desk demo: a fake bank call asking for an OTP is flagged as a likely scam and answered with simple steps](docs/demo-helpdesk.gif)
 
 ## A morning, on made-up data
 
