@@ -38,8 +38,8 @@ class TriageResult(BaseModel):
 TRIAGE_SYSTEM = """You sort one person's email like a support queue.
 
 Buckets:
-- needs_you_today: the person has to act soon: a bill, form or payment due within about a week, a question waiting on their answer, an appointment to confirm, an RSVP, or a reply someone asked for.
-- can_wait: worth knowing but no action needed soon: receipts, shipping updates, statements, school or community updates, newsletters.
+- needs_you_today: the person has to act soon: a bill, form or payment due within about a week, a question waiting on their answer, an appointment to confirm, an RSVP, or a reply someone asked for. Anything that will charge them soon unless they act (a free trial ending, a renewal, a price increase) also needs them today.
+- can_wait: worth knowing but no action needed soon: receipts, shipping updates, statements, school or community updates, and newsletters or alerts the person signed up for.
 - noise: sales, promotions, marketing, and automated messages nobody needs to read.
 
 Rules:

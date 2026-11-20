@@ -1,0 +1,304 @@
+{
+  "generated": "2026-11-19T21:08",
+  "demo": true,
+  "emails": [
+    {
+      "id": "e01",
+      "bucket": "needs_you_today",
+      "summary": "Pay $84.20 water bill or set up autopay.",
+      "due": "Friday, November 21",
+      "looks_suspicious": false,
+      "from": "Prairie Water Utility <billing@prairiewater.example>",
+      "subject": "Your November water bill is ready"
+    },
+    {
+      "id": "e02",
+      "bucket": "needs_you_today",
+      "summary": "Sign field trip permission slip and return it with $8.",
+      "due": "Friday, November 20",
+      "looks_suspicious": false,
+      "from": "Maple Elementary <office@maple-elem.example>",
+      "subject": "Field trip permission slip due tomorrow"
+    },
+    {
+      "id": "e03",
+      "bucket": "needs_you_today",
+      "summary": "Send two or three interview times for QA Engineer role.",
+      "due": null,
+      "looks_suspicious": false,
+      "from": "Jordan Lee <jordan.lee@talentpartners.example>",
+      "subject": "Interview times for the QA Engineer role"
+    },
+    {
+      "id": "e04",
+      "bucket": "noise",
+      "summary": "Brightmart flash sale up to 60% off.",
+      "due": null,
+      "looks_suspicious": false,
+      "from": "Brightmart <deals@brightmart.example>",
+      "subject": "48-hour flash sale: up to 60% off everything!"
+    },
+    {
+      "id": "e05",
+      "bucket": "noise",
+      "summary": "Brightmart reminder about items left in cart.",
+      "due": null,
+      "looks_suspicious": false,
+      "from": "Brightmart <deals@brightmart.example>",
+      "subject": "Your cart misses you"
+    },
+    {
+      "id": "e06",
+      "bucket": "noise",
+      "summary": "Deal Daily roundup of today's deals.",
+      "due": null,
+      "looks_suspicious": false,
+      "from": "Deal Daily <hello@dealdaily.example>",
+      "subject": "Today's top 10 deals"
+    },
+    {
+      "id": "e07",
+      "bucket": "can_wait",
+      "summary": "Maple Elementary PTA November newsletter with upcoming dates.",
+      "due": null,
+      "looks_suspicious": false,
+      "from": "Maple Elementary PTA <pta@maple-elem.example>",
+      "subject": "PTA newsletter: November"
+    },
+    {
+      "id": "e08",
+      "bucket": "can_wait",
+      "summary": "Package shipped, arriving Monday, November 23.",
+      "due": "Monday, November 23",
+      "looks_suspicious": false,
+      "from": "QuickShip <updates@quickship.example>",
+      "subject": "Your package has shipped"
+    },
+    {
+      "id": "e09",
+      "bucket": "needs_you_today",
+      "summary": "Reply C to confirm dental cleaning on November 24.",
+      "due": "Monday, November 24 at 3:30 PM",
+      "looks_suspicious": false,
+      "from": "Sunrise Dental <appointments@sunrisedental.example>",
+      "subject": "Please confirm your appointment on Mon, Nov 24 at 3:30 PM"
+    },
+    {
+      "id": "e10",
+      "bucket": "can_wait",
+      "summary": "Warning: urgent password request from a lookalike domain; do not click.",
+      "due": null,
+      "looks_suspicious": true,
+      "from": "Account Security <security@acc0unt-verify.example>",
+      "subject": "Urgent: your account will be suspended in 24 hours"
+    },
+    {
+      "id": "e11",
+      "bucket": "can_wait",
+      "summary": "October bank statement is available online; no action needed.",
+      "due": null,
+      "looks_suspicious": false,
+      "from": "Heartland Bank <statements@heartlandbank.example>",
+      "subject": "Your October statement is available"
+    },
+    {
+      "id": "e12",
+      "bucket": "needs_you_today",
+      "summary": "Renew or return two library books.",
+      "due": "Sunday, November 22",
+      "looks_suspicious": false,
+      "from": "Cedar Public Library <notices@cedarlibrary.example>",
+      "subject": "2 items due in 3 days"
+    },
+    {
+      "id": "e13",
+      "bucket": "needs_you_today",
+      "summary": "Tell Dana if you can come to Saturday dinner.",
+      "due": "Thursday",
+      "looks_suspicious": false,
+      "from": "Dana Whitfield <dana.w@mail.example>",
+      "subject": "Dinner on Saturday?"
+    },
+    {
+      "id": "e14",
+      "bucket": "can_wait",
+      "summary": "Job alerts: 12 new QA Engineer listings matching your search.",
+      "due": null,
+      "looks_suspicious": false,
+      "from": "JobBoard Alerts <alerts@jobboard.example>",
+      "subject": "12 new QA Engineer jobs for you"
+    },
+    {
+      "id": "e15",
+      "bucket": "needs_you_today",
+      "summary": "StreamFlix trial ends; cancel before renewal at $15.49 a month.",
+      "due": "November 21",
+      "looks_suspicious": false,
+      "from": "StreamFlix <billing@streamflix.example>",
+      "subject": "Your free trial ends in 2 days"
+    },
+    {
+      "id": "e16",
+      "bucket": "noise",
+      "summary": "Deal Daily says deals end tonight.",
+      "due": null,
+      "looks_suspicious": false,
+      "from": "Deal Daily <hello@dealdaily.example>",
+      "subject": "Last chance: these deals end tonight"
+    }
+  ],
+  "waiting": [
+    {
+      "thread_id": "t01",
+      "to": "Claims Team <claims@heartlandinsure.example>",
+      "subject": "Question about claim #48213",
+      "days_waiting": 9,
+      "body": "Hello, I submitted the photos for claim #48213 on November 10. Could you tell me if anything else is needed, and when I can expect an update? Thank you.",
+      "waiting_on": "the insurance claims team",
+      "draft": "I wanted to follow up on claim #48213 and my photo submission from November 10. Could you let me know whether anything else is needed from me, and when I might expect an update?"
+    },
+    {
+      "thread_id": "t02",
+      "to": "Rob's Plumbing <rob@robsplumbing.example>",
+      "subject": "Quote for kitchen faucet",
+      "days_waiting": 4,
+      "body": "Hi Rob, could you send me a quote for replacing our kitchen faucet? Any weekday next week works for a visit.",
+      "waiting_on": "Rob's Plumbing",
+      "draft": "I wanted to follow up on my earlier note about a quote for replacing our kitchen faucet. Could you send over a quote, and let me know if a weekday visit next week works for you?"
+    }
+  ],
+  "noise": [
+    {
+      "sender": "Brightmart",
+      "count": 41,
+      "unread": 41,
+      "unsubscribe": "https://brightmart.example/unsubscribe",
+      "opened": 0
+    },
+    {
+      "sender": "Deal Daily",
+      "count": 23,
+      "unread": 22,
+      "unsubscribe": "https://dealdaily.example/unsubscribe",
+      "opened": 1
+    },
+    {
+      "sender": "ShoeHub",
+      "count": 12,
+      "unread": 12,
+      "unsubscribe": "https://shoehub.example/unsubscribe",
+      "opened": 0
+    }
+  ],
+  "tickets": [
+    {
+      "id": "6bdbcb71",
+      "created": "2026-11-19T21:08",
+      "person": "Dad",
+      "request": "Internet not working since morning. The light on the box is blinking red. TV also not working.",
+      "had_image": false,
+      "category": "wifi_internet",
+      "urgency": "normal",
+      "scam_risk": "no_signs",
+      "summary": "Dad's internet and TV down since morning, router light blinking red",
+      "warning": "",
+      "steps": "1. Check the box's power cable and the cable from the wall. Push both in firmly.\n2. Turn the box off at the wall switch. Wait 1 minute. Turn it back on.\n3. Wait 5 minutes for the lights to settle. Check if the light is still red.\n4. If it is still red, the problem may be with the internet company. Call them only on the number printed on your bill or their official app.\n5. If anyone asks you for a code, a password, or to install an app, say no and call me first.\n6. Send me a photo of the box's lights so I can help.",
+      "status": "open"
+    },
+    {
+      "id": "9d2adb16",
+      "created": "2026-11-19T21:08",
+      "person": "Mom",
+      "request": "Got this SMS: 'Dear customer, your electricity connection will be disconnected tonight at 9:30 PM because your last month bill was not updated. Please contact our officer immediately at 98XXXXXX10.' Should I call?",
+      "had_image": false,
+      "category": "scam_or_suspicious",
+      "urgency": "urgent",
+      "scam_risk": "likely_scam",
+      "summary": "Mom got SMS threatening electricity cut-off tonight, asks to call",
+      "warning": "This message looks like a scam. Do NOT call the number in the message. Do NOT click any links. Never share any codes, OTPs, PINs, passwords, or bank or card details with anyone. Do not install any app they ask for. Please check with me first before doing anything.",
+      "steps": "1. Do not call the number in the SMS.\n2. Do not reply to the message.\n3. If you are worried about your bill, look at your last paper bill or the official electricity app. Use only the phone number printed there.\n4. Delete the SMS, or block the number.\n5. If anyone calls you about this, hang up.\n6. Send me a message, and I will check your bill with you.",
+      "status": "open"
+    },
+    {
+      "id": "4bd5b3ef",
+      "created": "2026-11-19T21:08",
+      "person": "Mother-in-law",
+      "request": "WhatsApp is saying storage full. I cannot download the photos you sent.",
+      "had_image": false,
+      "category": "phone_or_tablet",
+      "urgency": "normal",
+      "scam_risk": "no_signs",
+      "summary": "Mother-in-law's phone storage full, WhatsApp photos won't download",
+      "warning": "",
+      "steps": "1. Open WhatsApp. Tap Settings (the gear icon, or the three dots at the top, then Settings). Tap Storage and Data, then Manage Storage.\n2. Look at the big items at the top. Delete old videos and forwarded files you no longer need. Do not delete photos you want to keep.\n3. Clear out the chats you don't need, like big groups that send lots of good-morning videos.\n4. Outside WhatsApp, open your Photos or Gallery app. Delete old videos you don't need. Then empty the 'Recently Deleted' or 'Trash' folder.\n5. Delete any apps you never use.\n6. Go back to my chat and tap the photos again to download them. If it still says storage full, call me and we will fix it together.",
+      "status": "open"
+    },
+    {
+      "id": "b591fd5c",
+      "created": "2026-11-19T21:08",
+      "person": "Father-in-law",
+      "request": "Someone called from the bank saying my card is blocked. He said he will send an OTP and I should read it to him to unblock the card. He was very polite.",
+      "had_image": false,
+      "category": "payments_and_banking",
+      "urgency": "urgent",
+      "scam_risk": "likely_scam",
+      "summary": "Caller claiming bank asked father-in-law to read OTP",
+      "warning": "This looks like a scam. Do not read or share the OTP or any code with anyone, even if they sound polite or say they are from the bank. Banks never ask for your OTP. Do not click any links. Do not call any number the caller or a message gives you. Do not share passwords, PINs, or card details. Please check with me first before doing anything.",
+      "steps": "1. Do not read the OTP to anyone. Ignore it if it arrives.\n2. If he calls again, hang up. You do not need to be polite.\n3. If you already shared a code, call me right away. Then call the number printed on the back of your card to block it.\n4. To check your card, call only the number on the back of your card. Do not use any number the caller gave you.\n5. Do not install any app the caller asks you to install.\n6. Call me so we can check your account together.",
+      "status": "open"
+    },
+    {
+      "id": "a24b2a1f",
+      "created": "2026-11-19T21:08",
+      "person": "Mom",
+      "request": "Phone is saying storage almost full again. Same as last month.",
+      "had_image": false,
+      "category": "phone_or_tablet",
+      "urgency": "low",
+      "scam_risk": "no_signs",
+      "summary": "Mom's phone storage almost full again, recurring monthly",
+      "warning": "",
+      "steps": "1. Open WhatsApp. Tap the three dots or Settings, then Storage and data, then Manage storage. Delete big videos and forwarded files you don't need.\n2. Open your Photos app. Delete blurry photos, copies, and old videos. Videos take the most space.\n3. Empty the 'Recently deleted' or 'Bin' folder in Photos. Otherwise the space is not freed.\n4. Delete apps you never use. Press and hold the app, then tap Uninstall or Remove App.\n5. Open Settings, then Storage, to see what is using the most space. Send me a screenshot of that screen.\n6. In WhatsApp, turn off automatic downloading of photos and videos. This stops it filling up again next month.",
+      "status": "open"
+    },
+    {
+      "id": "7a22b8ed",
+      "created": "2026-11-19T21:08",
+      "person": "Dad",
+      "request": "How do we video call you on the new smart TV? The grandkids want to see us on the big screen.",
+      "had_image": false,
+      "category": "tv_and_streaming",
+      "urgency": "low",
+      "scam_risk": "no_signs",
+      "summary": "Dad wants to video call family on the new smart TV",
+      "warning": "",
+      "steps": "1. Look at the label on the back of the TV or the box. Send me a photo of the brand and model name. 2. Check if the TV has a small camera on top. Most TVs do not, so you may need a plug-in camera. 3. Don't buy a camera or install anything yet. I will tell you which one works with your TV. 4. For now, call me on WhatsApp video from your phone as usual. 5. I will call you to set up the big screen together, step by step.",
+      "status": "open"
+    }
+  ],
+  "ticket_patterns": {
+    "total": 6,
+    "open": 6,
+    "by_category": {
+      "Phone or tablet": 2,
+      "Wi-Fi and internet": 1,
+      "Scam or suspicious": 1,
+      "Payments and banking": 1,
+      "TV and streaming": 1
+    },
+    "by_person": {
+      "Dad": 2,
+      "Mom": 2,
+      "Mother-in-law": 1,
+      "Father-in-law": 1
+    },
+    "repeats": [
+      "Phone or tablet: 2 tickets in 30 days"
+    ]
+  },
+  "models": {
+    "triage": "claude-haiku-5-5",
+    "helpdesk": "claude-opus-5-5"
+  },
+  "cost": "8 Claude calls, 10,792 tokens in, 3,337 out, about $0.071"
+}

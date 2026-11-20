@@ -25,6 +25,65 @@ questions on WhatsApp, often with a screenshot. I paste each one in and it becom
 - a simple step-by-step reply in their language, ready to send back
 - patterns over time, so I can see what keeps coming back and teach the fix once
 
+## A morning, on made-up data
+
+Real output of `python digest.py --demo`, run on the made-up [demo inbox](demo/inbox.json) and
+[family requests](demo/family_requests.json). The full run is saved in
+[demo/sample_run.json](demo/sample_run.json), and the app's demo mode shows it.
+
+```
+Good morning. 7 things need you today:
+  - Pay $84.20 water bill or set up autopay. (due: Friday, November 21)
+  - Sign field trip permission slip and return it with $8. (due: Friday, November 20)
+  - Send two or three interview times for QA Engineer role.
+  - Reply C to confirm dental cleaning on November 24. (due: Monday, November 24 at 3:30 PM)
+  - Renew or return two library books. (due: Sunday, November 22)
+  - Tell Dana if you can come to Saturday dinner. (due: Thursday)
+  - StreamFlix trial ends; cancel before renewal at $15.49 a month. (due: November 21)
+
+Looks like a scam, don't click anything:
+  - Urgent: your account will be suspended in 24 hours (from Account Security <security@acc0unt-verify.example>)
+
+Still waiting on:
+  - the insurance claims team (9 days): Question about claim #48213
+  - Rob's Plumbing (4 days): Quote for kitchen faucet
+
+Can wait: 4 emails. Noise: 4 emails.
+
+Noise report:
+  - Brightmart sent you 41 emails this month. You opened none.
+  - Deal Daily sent you 23 emails this month. You opened 1.
+  - ShoeHub sent you 12 emails this month. You opened none.
+
+Family help desk: 6 open tickets
+  - [normal] Dad: Dad's internet and TV down since morning, router light blinking red
+  - [urgent] Mom: Mom got SMS threatening electricity cut-off tonight, asks to call (likely scam)
+  - [normal] Mother-in-law: Mother-in-law's phone storage full, WhatsApp photos won't download
+  - [urgent] Father-in-law: Caller claiming bank asked father-in-law to read OTP (likely scam)
+  - [low] Mom: Mom's phone storage almost full again, recurring monthly
+  - [low] Dad: Dad wants to video call family on the new smart TV
+
+This run: 8 Claude calls, 10,792 tokens in, 3,337 out, about $0.071
+```
+
+The reply it drafted for the fake bank call:
+
+```
+This looks like a scam. Do not read or share the OTP or any code with anyone, even if they sound
+polite or say they are from the bank. Banks never ask for your OTP. Do not click any links. Do not
+call any number the caller or a message gives you. Do not share passwords, PINs, or card details.
+Please check with me first before doing anything.
+
+1. Do not read the OTP to anyone. Ignore it if it arrives.
+2. If he calls again, hang up. You do not need to be polite.
+3. If you already shared a code, call me right away. Then call the number printed on the back of
+   your card to block it.
+4. To check your card, call only the number on the back of your card. Do not use any number the
+   caller gave you.
+5. Do not install any app the caller asks you to install.
+6. Call me so we can check your account together.
+```
+
 ## Why I built it
 
 During my job search my inbox got out of hand: hundreds of unread emails, with the few that
@@ -73,15 +132,30 @@ WhatsApp message + screenshot ──> Claude (with vision) ──> ticket + repl
 
 ## Testing
 
+| Check | Model | Result |
+| --- | --- | --- |
+| Scam and safety cases ([demo/helpdesk_cases.json](demo/helpdesk_cases.json)) | Claude Opus 5.5 | 12 of 12 passed: all 7 scams flagged as likely scams and urgent, no false alarms on 5 normal questions |
+| Email sorting, 16 hand-labeled demo emails | Claude Haiku 5.5 | 14 of 16 on the first test; 16 of 16 in 3 of 3 runs after one prompt fix |
+
+**What the test caught.** The first sorting test put "Your free trial ends in 2 days" under "can
+wait". A surprise charge is exactly what the digest should catch, so I added a general rule:
+anything that will charge you unless you act needs you today. Re-run three times, it sorted all
+16 correctly each time. I wrote the demo inbox myself, so the real check is my own email, labeled
+by hand:
+
 ```
 python label.py 40                          # label 40 of your own emails by hand
 python evaluate.py triage data/labeled.json # how often it sorts them the way you would
 python evaluate.py helpdesk                 # scam patterns must be flagged; normal questions must not
 ```
 
-The safety cases in `demo/helpdesk_cases.json` cover the scams my family actually gets: fake bank
-calls asking for an OTP, "install AnyDesk for your refund", KYC and electricity cut-off texts,
-parcel fees, prize messages, and fake police calls.
+The safety cases cover the scams my family actually gets: fake bank calls asking for an OTP,
+"install AnyDesk for your refund", KYC and electricity cut-off texts, parcel fees, prize messages,
+and fake police calls.
+
+**Cost.** Sorting a day of email with Haiku 5.5 costs about a tenth of a cent. The full demo run
+above (16 emails, 3 sent emails, 6 family tickets on Opus 5.5) cost about 7 cents. Every run
+prints its cost.
 
 ## Run it yourself
 
