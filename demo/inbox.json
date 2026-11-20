@@ -17,11 +17,11 @@
   },
   {
     "id": "e03",
-    "from": "Jordan Lee <jordan.lee@talentpartners.example>",
-    "subject": "Interview times for the QA Engineer role",
+    "from": "Coach Rivera <coach.rivera@kicksleague.example>",
+    "subject": "Can you drive the carpool Thursday?",
     "date": "Thu, 19 Nov 2026 08:05:00 -0600",
     "unread": true,
-    "body": "Hi, thanks for applying. The hiring manager would like to talk with you this week. Could you send me two or three times that work for you on Thursday or Friday afternoon?"
+    "body": "Hi! Practice moves to Thursday at 5:30 this week because of field repairs. Can you drive the carpool? Please let me know by Wednesday so I can plan."
   },
   {
     "id": "e04",
@@ -105,11 +105,11 @@
   },
   {
     "id": "e14",
-    "from": "JobBoard Alerts <alerts@jobboard.example>",
-    "subject": "12 new QA Engineer jobs for you",
+    "from": "Cedar Springs Rec Center <news@cedarspringsrec.example>",
+    "subject": "The winter class catalog is here",
     "date": "Thu, 19 Nov 2026 06:00:00 -0600",
     "unread": true,
-    "body": "New jobs matching your saved search: QA Engineer (remote), Senior QA Analyst, Test Automation Engineer, and 9 more."
+    "body": "Browse swim, art, and dance classes for kids and adults. Registration opens December 1."
   },
   {
     "id": "e15",

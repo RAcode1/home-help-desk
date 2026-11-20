@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 
 import config
 from helpdesk import CATEGORIES, add_ticket, load_tickets, patterns, reply_text, set_status, triage_ticket
-from noise import noise_line
+from noise import noise_line, savings_line
 
 load_dotenv()
 st.set_page_config(page_title="Home Help Desk", page_icon="🛎️", layout="centered")
@@ -88,6 +88,7 @@ with digest_tab:
             for row in result["noise"]:
                 link = f" [Unsubscribe]({row['unsubscribe']})" if row.get("unsubscribe") else ""
                 st.markdown(f"- {noise_line(row)}{link}")
+            st.caption(savings_line(result["noise"]) + " Each link opens the sender's own unsubscribe page.")
 
         with st.expander("All sorted emails"):
             st.dataframe(

@@ -22,3 +22,9 @@ def noise_report(sender_stats, top=3):
 def noise_line(row):
     opened = "none" if row["opened"] == 0 else str(row["opened"])
     return f"{row['sender']} sent you {row['count']} emails this month. You opened {opened}."
+
+
+def savings_line(rows):
+    """What unsubscribing would actually save, so the suggestion is worth acting on."""
+    total = sum(row["count"] for row in rows)
+    return f"Unsubscribe from these and you'd get {total} fewer emails a month."

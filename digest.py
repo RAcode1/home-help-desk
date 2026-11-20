@@ -24,7 +24,7 @@ from pathlib import Path
 import config
 from helpdesk import CATEGORIES, load_tickets, patterns, triage_ticket
 from llm import CostTracker
-from noise import noise_line, noise_report
+from noise import noise_line, noise_report, savings_line
 from triage import find_waiting, triage
 
 DEMO_DIR = Path("demo")
@@ -126,6 +126,7 @@ def render_text(result):
     if result["noise"]:
         lines.append("\nNoise report:")
         lines += [f"  - {noise_line(row)}" for row in result["noise"]]
+        lines.append(f"  {savings_line(result['noise'])}")
     if s["open_tickets"]:
         lines.append(f"\nFamily help desk: {len(s['open_tickets'])} open tickets")
         lines += [f"  - {_ticket_line(t)}" for t in s["open_tickets"]]
@@ -161,6 +162,8 @@ def render_html(result):
             escape(noise_line(row)) + (f" <a href='{escape(row['unsubscribe'])}'>Unsubscribe</a>" if row.get("unsubscribe") else "")
             for row in result["noise"]
         ))
+        parts.append(f"<p><b>{escape(savings_line(result['noise']))}</b> Each link opens the sender's "
+                     "own unsubscribe page; nothing is unsubscribed automatically.</p>")
     if s["open_tickets"]:
         parts.append(f"<h3>Family help desk: {len(s['open_tickets'])} open tickets</h3>")
         parts.append(items(escape(_ticket_line(t)) for t in s["open_tickets"]))

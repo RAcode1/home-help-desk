@@ -39,20 +39,20 @@ Real output of `python digest.py --demo`, run on the made-up [demo inbox](demo/i
 [demo/sample_run.json](demo/sample_run.json), and the app's demo mode shows it.
 
 ```
-Good morning. 7 things need you today:
-  - Pay $84.20 water bill or set up autopay. (due: Friday, November 21)
+Good morning, 7 things need you today:
+  - Pay November water bill of $84.20. (due: Friday, November 21)
   - Sign field trip permission slip and return it with $8. (due: Friday, November 20)
-  - Send two or three interview times for QA Engineer role.
-  - Reply C to confirm dental cleaning on November 24. (due: Monday, November 24 at 3:30 PM)
-  - Renew or return two library books. (due: Sunday, November 22)
-  - Tell Dana if you can come to Saturday dinner. (due: Thursday)
-  - StreamFlix trial ends; cancel before renewal at $15.49 a month. (due: November 21)
+  - Reply to Coach Rivera whether you can drive carpool Thursday. (due: Wednesday)
+  - Reply C to confirm dental cleaning on Monday, November 24. (due: Monday, November 24 at 3:30 PM)
+  - Renew or return two library books due Sunday. (due: Sunday, November 22)
+  - Tell Dana if you can make Saturday dinner at 6. (due: Thursday)
+  - Free trial ends; cancel by November 21 or plan renews at $15.49. (due: November 21)
 
 Looks like a scam, don't click anything:
   - Urgent: your account will be suspended in 24 hours (from Account Security <security@acc0unt-verify.example>)
 
 Still waiting on:
-  - the insurance claims team (9 days): Question about claim #48213
+  - the claims team (9 days): Question about claim #48213
   - Rob's Plumbing (4 days): Quote for kitchen faucet
 
 Can wait: 4 emails. Noise: 4 emails.
@@ -61,34 +61,34 @@ Noise report:
   - Brightmart sent you 41 emails this month. You opened none.
   - Deal Daily sent you 23 emails this month. You opened 1.
   - ShoeHub sent you 12 emails this month. You opened none.
+  Unsubscribe from these and you'd get 76 fewer emails a month.
 
 Family help desk: 6 open tickets
-  - [normal] Dad: Dad's internet and TV down since morning, router light blinking red
-  - [urgent] Mom: Mom got SMS threatening electricity cut-off tonight, asks to call (likely scam)
-  - [normal] Mother-in-law: Mother-in-law's phone storage full, WhatsApp photos won't download
-  - [urgent] Father-in-law: Caller claiming bank asked father-in-law to read OTP (likely scam)
+  - [normal] Dad: Dad: internet and TV down since morning, router light red
+  - [urgent] Mom: Mom got SMS threatening electricity disconnection tonight, asks to call (likely scam)
+  - [normal] Mother-in-law: Mother-in-law's phone storage full, can't download WhatsApp photos
+  - [urgent] Father-in-law: Caller claiming bank asked Father-in-law to read OTP (likely scam)
   - [low] Mom: Mom's phone storage almost full again, recurring monthly
-  - [low] Dad: Dad wants to video call family on the new smart TV
+  - [low] Dad: Dad wants to video call family on new smart TV
 
-This run: 8 Claude calls, 10,792 tokens in, 3,337 out, about $0.071
+This run: 8 Claude calls, 10,776 tokens in, 3,480 out, about $0.073
 ```
 
 The reply it drafted for the fake bank call:
 
 ```
-This looks like a scam. Do not read or share the OTP or any code with anyone, even if they sound
-polite or say they are from the bank. Banks never ask for your OTP. Do not click any links. Do not
-call any number the caller or a message gives you. Do not share passwords, PINs, or card details.
-Please check with me first before doing anything.
+This looks like a scam. Real banks never ask you to read out an OTP, even if the caller is very
+polite. Do not tell anyone the OTP or any code, PIN, or password. Do not click any links in
+messages. Do not call any number the caller or the message gave you. If he calls again, just hang
+up. Please check with me first before doing anything.
 
-1. Do not read the OTP to anyone. Ignore it if it arrives.
+1. Do not read the OTP to anyone. Not to the caller, not to anyone else.
 2. If he calls again, hang up. You do not need to be polite.
-3. If you already shared a code, call me right away. Then call the number printed on the back of
-   your card to block it.
-4. To check your card, call only the number on the back of your card. Do not use any number the
-   caller gave you.
-5. Do not install any app the caller asks you to install.
-6. Call me so we can check your account together.
+3. If you already shared a code, call your bank right away. Use the number on the back of your
+   card.
+4. If you did not share anything, you can still call that number on your card to check your card.
+5. Delete any message with the OTP after you have hung up.
+6. Call or message me so we can check together.
 ```
 
 ## Why I built it
