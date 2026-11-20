@@ -10,7 +10,7 @@ Settings for Home Help Desk. Edit FAMILY and HELPER_NAME to match your family.
 # Sorting email runs every morning on dozens of messages, so it can use a
 # cheaper model. Family tickets are few, and a missed scam costs more than a
 # few cents, so they use the stronger model.
-TRIAGE_MODEL = "claude-opus-5-5"
+TRIAGE_MODEL = "claude-haiku-5-5"
 HELPDESK_MODEL = "claude-opus-5-5"
 
 # Price per million tokens (input, output), used to show what each run cost.
