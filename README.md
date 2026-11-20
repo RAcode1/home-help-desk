@@ -135,13 +135,22 @@ WhatsApp message + screenshot ──> Claude (with vision) ──> ticket + repl
 | Check | Model | Result |
 | --- | --- | --- |
 | Scam and safety cases ([demo/helpdesk_cases.json](demo/helpdesk_cases.json)) | Claude Opus 5.5 | 12 of 12 passed: all 7 scams flagged as likely scams and urgent, no false alarms on 5 normal questions |
-| Email sorting, 16 hand-labeled demo emails | Claude Haiku 5.5 | 14 of 16 on the first test; 16 of 16 in 3 of 3 runs after one prompt fix |
+| Email sorting, 16 labeled demo emails | Claude Haiku 5.5 | 14 of 16 on the first test; 16 of 16 in 3 of 3 runs after one prompt fix |
+| Email sorting, 39 of my own emails labeled by hand | Claude Haiku 5.5 | 36 of 39 (92%) |
 
-**What the test caught.** The first sorting test put "Your free trial ends in 2 days" under "can
-wait". A surprise charge is exactly what the digest should catch, so I added a general rule:
-anything that will charge you unless you act needs you today. Re-run three times, it sorted all
-16 correctly each time. I wrote the demo inbox myself, so the real check is my own email, labeled
-by hand:
+**What the tests caught.**
+
+- The first demo test put "Your free trial ends in 2 days" under "can wait". A surprise charge is
+  exactly what the digest should catch, so I added a general rule: anything that will charge you
+  unless you act needs you today. Re-run three times, it sorted all 16 correctly each time.
+- My own email showed the limits of tuning on a made-up inbox. Two of the three misses came from
+  a demo-era rule that files newsletters and job alerts under "can wait"; I treat them as noise.
+  That's a personal preference, so the next step is a setting for it, checked on emails I haven't
+  labeled yet instead of the same 39.
+- My 39 emails that day had no "needs me today" ones, so the demo test still covers that bucket
+  until I label more days.
+
+To label and test your own email:
 
 ```
 python label.py 40                          # label 40 of your own emails by hand
