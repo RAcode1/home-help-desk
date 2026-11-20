@@ -136,17 +136,19 @@ WhatsApp message + screenshot ──> Claude (with vision) ──> ticket + repl
 | --- | --- | --- |
 | Scam and safety cases ([demo/helpdesk_cases.json](demo/helpdesk_cases.json)) | Claude Opus 5.5 | 12 of 12 passed: all 7 scams flagged as likely scams and urgent, no false alarms on 5 normal questions |
 | Email sorting, 16 labeled demo emails | Claude Haiku 5.5 | 14 of 16 on the first test; 16 of 16 in 3 of 3 runs after one prompt fix |
-| Email sorting, 39 of my own emails labeled by hand | Claude Haiku 5.5 | 36 of 39 (92%) |
+| Email sorting, 39 of my own emails labeled by hand | Claude Haiku 5.5 | 35 to 37 of 39 (90-95%) across 3 runs; no email I wanted was hidden |
 
 **What the tests caught.**
 
 - The first demo test put "Your free trial ends in 2 days" under "can wait". A surprise charge is
   exactly what the digest should catch, so I added a general rule: anything that will charge you
   unless you act needs you today. Re-run three times, it sorted all 16 correctly each time.
-- My own email showed the limits of tuning on a made-up inbox. Two of the three misses came from
-  a demo-era rule that files newsletters and job alerts under "can wait"; I treat them as noise.
-  That's a personal preference, so the next step is a setting for it, checked on emails I haven't
-  labeled yet instead of the same 39.
+- On my own email the first test said 36 of 39. Reviewing the 3 misses, two were my own labeling
+  mistakes, so I corrected the answer key and re-ran it three times: 35, 37 and 35 of 39
+  (90-95%). Every miss erred toward showing me more (newsletters filed as "can wait", a
+  password-reset email flagged as "needs you"); it never hid an email I wanted. The one steady
+  disagreement is job-match alerts, which I treat as noise. That's a personal preference, so the
+  next step is a setting for it, checked on emails I haven't labeled yet.
 - My 39 emails that day had no "needs me today" ones, so the demo test still covers that bucket
   until I label more days.
 
