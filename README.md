@@ -120,6 +120,36 @@ WhatsApp message + screenshot ──> Claude (with vision) ──> ticket + repl
 | `llm.py` | Claude calls with structured output, refusal handling, cost tracking |
 | `evaluate.py`, `label.py` | Accuracy and safety testing |
 | `app.py` | Streamlit app, with a demo mode that needs no sign-in |
+| `mcp_server.py` | MCP server, so Claude Desktop can use the help desk in plain English |
+
+## Use it from Claude Desktop (MCP)
+
+`mcp_server.py` is an MCP (Model Context Protocol) server: a standard plug that lets Claude Desktop
+or Claude Code use Home Help Desk in plain English. I can ask Claude *"What's in my digest today?"*,
+*"Log a ticket: Dad says the Wi-Fi light is red again"*, or *"What keeps coming back this month?"*
+
+| Tool | What it does |
+| --- | --- |
+| `get_digest` | Today's digest (read-only) |
+| `list_tickets` | Family tickets by status (read-only) |
+| `log_ticket` | Sorts a family message with Claude, applies the scam guardrail, saves the ticket, returns the reply |
+| `close_ticket` | Marks a ticket resolved |
+| `ticket_patterns` | What keeps coming back (read-only) |
+
+Read-only tools are marked read-only for the client, and no tool can send, delete, or change email.
+To connect it, add this to Claude Desktop's config (Settings > Developer > Edit Config), then restart
+Claude Desktop:
+
+```json
+{
+  "mcpServers": {
+    "home-help-desk": {
+      "command": "C:\\path\\to\\home-help-desk\\.venv\\Scripts\\python.exe",
+      "args": ["C:\\path\\to\\home-help-desk\\mcp_server.py"]
+    }
+  }
+}
+```
 
 ## Safety and privacy
 
